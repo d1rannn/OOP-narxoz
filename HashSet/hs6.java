@@ -7,7 +7,7 @@ public class hs6 {
         Scanner in = new Scanner(System.in);
         HashSet<String> hs = new HashSet<>();
         while (true) {
-            String s = in.nextLine();
+            String s = in.next().toLowerCase();
             if (s.contains("stop")) {
                 break;
             } else hs.add(s);
@@ -20,9 +20,8 @@ public class hs6 {
     }
     public static int countVowel(String s){
         int count = 0;
-        String st = s.toLowerCase();
-        for (int i = 0; i < st.length(); i++) {
-            if(st.charAt(i) == 'a' || st.charAt(i) == 'e' || st.charAt(i) == 'i' || st.charAt(i) == 'o' || st.charAt(i) == 'u'){
+        for (int i = 0; i < s.length(); i++) {
+            if(s.charAt(i) == 'a' || s.charAt(i) == 'e' || s.charAt(i) == 'i' || s.charAt(i) == 'o' || s.charAt(i) == 'u'){
                 count++;
             }
         }
